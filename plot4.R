@@ -1,8 +1,7 @@
 source('loadData.R')
 
-png('plot4.png')
-
-par(mfrow=c(2,2))
+# Set facets.
+par(mfrow=c(2,2), bg="white")
 
 # Global Active Power
 plot(data$DateTime, data$Global_active_power, type = "l",
@@ -34,5 +33,5 @@ plot(data$DateTime, data$Global_reactive_power,
      xlab = "datetime"
 )
 
-
+dev.copy(png, 'plot4.png')
 dev.off()

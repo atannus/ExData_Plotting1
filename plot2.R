@@ -1,6 +1,7 @@
 source('loadData.R')
 
-png('plot2.png')
+# Set facets.
+par(mfrow = c(1,1), bg="white")
 
 # Global active power vs Time.
 plot(data$DateTime, data$Global_active_power,
@@ -9,4 +10,5 @@ plot(data$DateTime, data$Global_active_power,
      xlab = ""
      )
 
+dev.copy(png, 'plot2.png')
 dev.off()
